@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--group 可设置单选效果-->
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/navigation_item_1"
+            android:checked="true"
+            android:icon="@drawable/abc_btn_radio_material"
+            android:title="微言-晨读励志" />
+
+        <item
+            android:id="@+id/navigation_item_2"
+            android:icon="@drawable/abc_btn_radio_material"
+            android:title="AndroidProgrammer" />
+
+    </group>
+
+    <item android:title="其他">
+
+        <menu>
+
+            <item
+                android:id="@+id/navigation_item_night"
+                android:icon="@drawable/abc_btn_radio_material"
+                android:title="夜间模式" />
+            <item
+                android:id="@+id/navigation_item_day"
+                android:icon="@drawable/abc_btn_radio_material"
+                android:title="白天模式" />
+        </menu>
+    </item>
+
+</menu>
