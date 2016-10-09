@@ -30,7 +30,6 @@ import com.robot.fragment.UserInfoFragment;
  */
 public class MainActivity extends BaseActivity {
     private DrawerLayout mDrawerLayout;
-    //    private Toolbar mToolbar;
     private ActionBarDrawerToggle mDrawerToggle;
     private NavigationView navigationView;
     private Fragment currentFragment;
@@ -40,11 +39,8 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        mToolbar = initToolbar();
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        initDrawer();
         initNavigationViewHeader();
-//        initTabLayout();
         initFragment(savedInstanceState);
     }
 
@@ -144,55 +140,5 @@ public class MainActivity extends BaseActivity {
         Log.d("wxl", "onSaveInstanceState=" + currentIndex);
         outState.putInt("currentIndex", currentIndex);
         super.onSaveInstanceState(outState);
-    }
-
-    /**
-     * 这段代码其实可以去掉，其实是多余的
-     */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    /**
-     * 这段代码其实可以去掉，其实是多余的
-     */
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        switch (id) {
-            case R.id.action_bottomsheetdialog:
-                showBottomSheetDialog();
-                break;
-            case R.id.action_about:
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/robotlife"));
-                mActivity.startActivity(intent);
-                break;
-            default:
-                //对没有处理的事件，交给父类来处理
-                return super.onOptionsItemSelected(item);
-
-        }
-
-        return true;
-    }
-
-    /**
-     * 这段代码其实可以去掉
-     */
-    private BottomSheetDialog mBottomSheetDialog;
-    private void showBottomSheetDialog() {
-        View sheetDialogView = getLayoutInflater().inflate(R.layout.sheet_dialog, null);
-        mBottomSheetDialog = new BottomSheetDialog(mActivity);
-        mBottomSheetDialog.setContentView(sheetDialogView);
-        mBottomSheetDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-            @Override
-            public void onDismiss(DialogInterface dialog) {
-                mBottomSheetDialog = null;
-            }
-        });
-        mBottomSheetDialog.show();
     }
 }
