@@ -4,6 +4,16 @@
         <item name="colorPrimary">@color/text_color_primary</item>
         <item name="colorPrimaryDark">@color/text_color_primary</item>
         <item name="colorAccent">@color/text_color_primary</item>
+        <!-- To change the popup menu and app text color  -->
+        <item name="android:textColor">@color/black</item>
+
+        <!-- To change the background of options menu-->
+        <item name="android:itemBackground">@color/white</item>
+        <!--<item name="actionOverflowMenuStyle">@style/CMOptionsMenu</item>-->
     </style>
 
+    <style name="CMOptionsMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:popupBackground">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>
