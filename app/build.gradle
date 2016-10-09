@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.1"
 
     defaultConfig {
-        applicationId "com.example.wuxiaolongl.designsupportlibrarysample"
+        applicationId "com.robot.app"
         minSdkVersion 14
         targetSdkVersion 24
         versionCode 1
