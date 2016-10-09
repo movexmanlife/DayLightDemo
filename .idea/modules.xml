@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DayLightDemo.iml" filepath="$PROJECT_DIR$/DayLightDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/toolbarhelper/toolbarhelper.iml" filepath="$PROJECT_DIR$/toolbarhelper/toolbarhelper.iml" />
     </modules>
   </component>
 </project>

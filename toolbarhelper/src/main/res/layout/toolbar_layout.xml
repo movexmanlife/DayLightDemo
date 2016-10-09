@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--会发生如下错误，如果android:layout_height="?attr/actionBarSize"设置成如此的话。-->
+    <!--Binary XML file line #15: You must supply a layout_height attribute.-->
+    <!--    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:theme="@style/ToolbarTheme" />-->
+
+<!--    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="@dimen/abc_action_bar_default_height_material"
+        app:theme="@style/ToolbarTheme" />-->
+
+    <!--如果不设置app:contentInsetLeft="16dp"属性，则没有左边距了-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="@dimen/abc_action_bar_default_height_material"
+        app:contentInsetLeft="16dp"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:theme="@style/ToolbarTheme"/>
+</RelativeLayout>
